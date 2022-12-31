@@ -146,11 +146,21 @@ hr {
   -webkit-transition: all 0.6s ease-in;
           transition: all 0.6s ease-in;
 }
+
 .work-wrapper:hover { border-color: #eb5424; }
 .work-wrapper .fa {
   color: #888888;
   font-size: 60px;
   padding-bottom: 40px;
+}
+
+.skill-wrapper {
+  border: 1px solid #666;
+  border-radius: 1px;
+  text-align: center;
+  padding: 2px 2px 2px 2px;
+  -webkit-transition: all 0.6s ease-in;
+          transition: all 0.6s ease-in;
 }
 /* END WORK */
 
