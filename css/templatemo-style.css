@@ -32,9 +32,9 @@ hr {
 }
 
 /* START NAVIGATION */
-.sticky-navigation { opacity: 0; }
+.sticky-navigation { opacity: 90; }
 .navbar-default {
-  background: #fff;
+  background: rgb(18, 154, 207);
   border: none;
   -webkit-box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
           box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
@@ -55,16 +55,16 @@ hr {
   line-height: 45px;
   letter-spacing: 1px;
 }
-.navbar-default .navbar-nav li a:hover { color: #eb5424; }
+.navbar-default .navbar-nav li a:hover { color: #000000; }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #eb5424;
+  color: #ffffff;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #eb5424;
+  color: #ffffff;
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
@@ -72,7 +72,7 @@ hr {
   padding-top: 10px;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background: #eb5424;
+  background: #0c0c0c;
   border-color: transparent;
 }
 .navbar-default .navbar-toggle:hover,
@@ -103,13 +103,13 @@ hr {
  }
 .tm-home-title { font-size: 60px; }
 .tm-home-subtitle {
-  color: #eb5424;
+  color: rgb(4, 69, 95);
   font-weight: bold;
   padding-bottom: 40px;
   letter-spacing: 2px;
 }
 .tm-view-more-btn {
-  background: #eb5424;
+  background: rgb(18, 154, 207);
   color: #ffffff;
   border: none;
   border-radius: 2px;
@@ -122,7 +122,7 @@ hr {
 }
 .tm-view-more-btn:hover {
   background: #ffffff;
-  color: #eb5424;
+  color: rgb(18, 154, 207);
 }
 /* END HOME */
 
@@ -334,7 +334,7 @@ hr {
 
 /* START ABOUT */
 .tm-about {
-  background: url('../images/about-bg.jpg');
+  background: url('../images/about-bg1.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
