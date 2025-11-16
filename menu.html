@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Teaberry Cafe</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f6f2ec;
+    color: #3b2a20;
+  }
+
+  .page-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #4a3624;
+  }
+
+  h2 {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+  }
+
+  .classic { background: #f0e2d0; }
+  .milk { background: #e3efe9; }
+  .iced { background: #e1edf7; }
+  .special { background: #f7e7ef; }
+  .light { background: #f5f5d6; }
+  .icecream { background: #e8e1f4; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background: #ffffffdd;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ingredients {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-title">Teaberry Cafe</div>
+
+<div class="section classic">
+<h2>☕ Classic Coffees</h2>
+<div class="grid">
+  <div class="card"><div class="title">Ristretto Espresso (Bitter)</div><div class="ingredients">36g ground coffee (1:2)</div></div>
+  <div class="card"><div class="title">Normale Double Espresso</div><div class="ingredients">36g ground coffee (1:2.5)</div></div>
+  <div class="card"><div class="title">Lungo Espresso (Light)</div><div class="ingredients">36g ground coffee (1:4)</div></div>
+  <div class="card"><div class="title">Americano</div><div class="ingredients">1 espresso, 120ml water</div></div>
+  <div class="card"><div class="title">Café au Lait</div><div class="ingredients">Brewed coffee and steamed milk</div></div>
+  <div class="card"><div class="title">Black Coffee</div><div class="ingredients">Brew/Classic (240ml)</div></div>
+</div>
+</div>
+
+<div class="section milk">
+<h2>🥛 Milk-Based Coffees</h2>
+<div class="grid">
+  <div class="card"><div class="title">Cappuccino</div><div class="ingredients">Espresso, steamed milk, foam</div></div>
+  <div class="card"><div class="title">Latte</div><div class="ingredients">Espresso, 180ml steamed milk</div></div>
+  <div class="card"><div class="title">Flat White</div><div class="ingredients">Double espresso, microfoam</div></div>
+  <div class="card"><div class="title">Macchiato</div><div class="ingredients">Espresso, foam</div></div>
+  <div class="card"><div class="title">Cortado</div><div class="ingredients">Espresso, equal milk</div></div>
+  <div class="card"><div class="title">Mocha</div><div class="ingredients">Espresso, chocolate, milk</div></div>
+</div>
+</div>
+
+<div class="section iced">
+<h2>🧊 Iced Drinks</h2>
+<div class="grid">
+  <div class="card"><div class="title">Iced Coffee</div><div class="ingredients">Brew over ice</div></div>
+  <div class="card"><div class="title">Iced Latte</div><div class="ingredients">Cold espresso, milk, ice</div></div>
+  <div class="card"><div class="title">Iced Mocha</div><div class="ingredients">Cold espresso, chocolate, milk, ice</div></div>
+  <div class="card"><div class="title">Iced Cappuccino</div><div class="ingredients">Espresso, cold froth, ice</div></div>
+  <div class="card"><div class="title">Cold Brew</div><div class="ingredients">Coarse coffee, water</div></div>
+</div>
+</div>
+
+<div class="section special">
+<h2>🍫 Specialty & Flavored Drinks</h2>
+<div class="grid">
+  <div class="card"><div class="title">Hot Chocolate</div><div class="ingredients">Chocolate syrup, milk, sugar</div></div>
+  <div class="card"><div class="title">White Chocolate Mocha</div><div class="ingredients">Espresso, white chocolate, milk</div></div>
+  <div class="card"><div class="title">Caramel Latte</div><div class="ingredients">Espresso, caramel, milk</div></div>
+  <div class="card"><div class="title">Vanilla Latte</div><div class="ingredients">Espresso, vanilla, milk</div></div>
+  <div class="card"><div class="title">Hazelnut Mocha</div><div class="ingredients">Espresso, hazelnut, cocoa, milk</div></div>
+  <div class="card"><div class="title">Matcha Latte</div><div class="ingredients">Matcha, water, milk</div></div>
+</div>
+</div>
+
+<div class="section light">
+<h2>🥤 Light & Caffeine-Free</h2>
+<div class="grid">
+  <div class="card"><div class="title">Teaberry Tea</div><div class="ingredients">Tea</div></div>
+  <div class="card"><div class="title">Herbal Tea</div><div class="ingredients">Herbs, hot water</div></div>
+  <div class="card"><div class="title">Steamed Milk</div><div class="ingredients">Milk (steamed)</div></div>
+  <div class="card"><div class="title">Frothy Milk</div><div class="ingredients">Milk (frothed)</div></div>
+</div>
+</div>
+
+<div class="section icecream">
+<h2>🍨 Coffee & Ice Cream Creations</h2>
+<div class="grid">
+  <div class="card"><div class="title">Affogato</div><div class="ingredients">Ice cream, espresso</div></div>
+  <div class="card"><div class="title">Iced Coffee Float</div><div class="ingredients">Iced coffee, ice cream</div></div>
+  <div class="card"><div class="title">Mocha Affogato</div><div class="ingredients">Chocolate ice cream, espresso</div></div>
+  <div class="card"><div class="title">Espresso Milkshake</div><div class="ingredients">Espresso, ice cream, milk</div></div>
+  <div class="card"><div class="title">Caramel Coffee Sundae</div><div class="ingredients">Ice cream, espresso, caramel</div></div>
+  <div class="card"><div class="title">Nutella Affogato</div><div class="ingredients">Ice cream, espresso, Nutella</div></div>
+  <div class="card"><div class="title">Cold Brew Float</div><div class="ingredients">Cold brew, ice cream</div></div>
+</div>
+</div>
+
+</body>
+</html>
