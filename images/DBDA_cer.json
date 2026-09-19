@@ -1,0 +1,55 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "type": [
+    "VerifiableCredential",
+    "OpenBadgeCredential"
+  ],
+  "id": "https://www.credential.net/12b8a655-9dd2-4799-a8d5-c57f612bd955",
+  "name": "Databricks Certified Data Analyst Associate",
+  "description": "Earners of the Data Analyst Associate certification have demonstrated an individual's proficiency in executing data analyst responsibilities through the effective utilization of the Databricks Data Intelligence Platform and its functionalities.Share your accomplishment on LinkedIn and tag us #DatabricksLearning. We'll be selecting random winners who tag us for Databricks swag. EARNING CRITERIACandidates must pass the Databricks Certified Data Analyst Associate certification exam.",
+  "image": {
+    "id": "https://pdf.ms.credential.net/v2/certificate/image?env=production&credential=x95eytvh&variant=medium",
+    "type": "Image"
+  },
+  "issuer": {
+    "type": "Profile",
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:45847",
+    "name": "Databricks Academy",
+    "url": "https://www.databricks.com/learn/training/login"
+  },
+  "validFrom": "2026-05-26T00:00:00Z",
+  "validUntil": "2028-05-26T00:00:00Z",
+  "credentialSubject": {
+    "type": "AchievementSubject",
+    "identifier": [
+      {
+        "type": "IdentityObject",
+        "hashed": true,
+        "identityHash": "sha256$09fb3d3a57e80d3a1588b88c078d389939bb8d08b8c819c07defecb649f27b88",
+        "identityType": "emailAddress",
+        "salt": "46fcc9615158bc5ab32e2ebfb2524ba7"
+      }
+    ],
+    "achievement": {
+      "id": "https://www.credential.net/group/364119",
+      "type": "Achievement",
+      "achievementType": "Achievement",
+      "name": "Databricks Certified Data Analyst Associate",
+      "description": "Earners of the Data Analyst Associate certification have demonstrated an individual's proficiency in executing data analyst responsibilities through the effective utilization of the Databricks Data Intelligence Platform and its functionalities.Share your accomplishment on LinkedIn and tag us #DatabricksLearning. We'll be selecting random winners who tag us for Databricks swag. EARNING CRITERIACandidates must pass the Databricks Certified Data Analyst Associate certification exam.",
+      "criteria": {
+        "narrative": "https://databricks.com/learn/certification/data-analyst-associate"
+      }
+    }
+  },
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-08-26T19:10:28Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:45847#62ae4c8c-dc10-11f0-9914-af0fa82e7cf8",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z2MK9V4yhKqUvm39dTGt2K7bvFqTcSv6R7RQZXAJZGnx998GizdxHfqjF1H7xnu33HXCJukBzwk6QVFo7SLDw3fnB"
+  }
+}
