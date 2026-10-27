@@ -158,10 +158,47 @@ const menuCopy = {
   }
 };
 
+const guideCopy = {
+  en: {
+    nav: "Brew guide", eyebrow: "HELP / MEASUREMENTS", title: "Brew volumes at a glance",
+    intro: "These are approximate cup volumes and machine preset espresso outputs from the supplied guide.",
+    coffeeTitle: "Coffee sizes", coffeeNote: "The same sizes apply to Classic / Rich and Over Ice / Cold Brew. Fill the cup with ice before brewing over ice.",
+    size: "Cup size", volume: "Approx. volume", espressoTitle: "Espresso presets",
+    espressoNote: "Ground coffee dose and approximate output volume.", preset: "Preset", dose: "Dose", output: "Output",
+    presets: ["Single espresso", "Double espresso", "Double cold-pressed", "Quad espresso", "Quad cold-pressed"],
+    note: "Preset volumes are machine settings. The recipes above give espresso yield by weight, which is a different measure. Adjust output for your coffee and taste.",
+    shareTitle: "Share this menu", shareCopy: "Scan the code to open this menu on another device.",
+    qrAlt: "QR code for the Teaberry Cafe menu", qrLink: "Open the Teaberry Cafe menu"
+  },
+  fr: {
+    nav: "Guide des volumes", eyebrow: "AIDE / MESURES", title: "Volumes en bref",
+    intro: "Volumes approximatifs des tasses et sorties d’espresso préréglées, selon le guide fourni.",
+    coffeeTitle: "Formats de café", coffeeNote: "Les mêmes formats s’appliquent aux modes Classique / Corsé et Sur glace / Infusion à froid. Pour un café sur glace, remplissez la tasse de glaçons avant l’infusion.",
+    size: "Format", volume: "Volume approx.", espressoTitle: "Préréglages espresso",
+    espressoNote: "Dose de café moulu et volume approximatif en tasse.", preset: "Préréglage", dose: "Dose", output: "Sortie",
+    presets: ["Espresso simple", "Double espresso", "Double extraction à froid", "Espresso quadruple", "Quadruple extraction à froid"],
+    note: "Ces volumes sont des réglages de machine. Les recettes ci-dessus indiquent le rendement de l’espresso en poids, une mesure différente. Ajustez selon le café et votre goût.",
+    shareTitle: "Partager ce menu", shareCopy: "Scannez le code pour ouvrir le menu sur un autre appareil.",
+    qrAlt: "Code QR du menu du Café Teaberry", qrLink: "Ouvrir le menu du Café Teaberry"
+  },
+  fa: {
+    nav: "راهنمای اندازه‌ها", eyebrow: "راهنما / اندازه‌ها", title: "حجم‌ها در یک نگاه",
+    intro: "این‌ها حجم تقریبی فنجان‌ها و خروجی‌های پیش‌فرض اسپرسو در راهنمای ارائه‌شده هستند.",
+    coffeeTitle: "اندازه‌های قهوه", coffeeNote: "این اندازه‌ها برای حالت‌های کلاسیک / غلیظ و روی یخ / دم‌آوری سرد یکسان‌اند. برای دم‌آوری روی یخ، پیش از شروع فنجان را از یخ پر کنید.",
+    size: "اندازهٔ فنجان", volume: "حجم تقریبی", espressoTitle: "تنظیمات پیش‌فرض اسپرسو",
+    espressoNote: "مقدار قهوهٔ آسیاب‌شده و حجم تقریبی نوشیدنی.", preset: "حالت", dose: "مقدار قهوه", output: "خروجی",
+    presets: ["اسپرسوی تک", "اسپرسوی دبل", "دبل با عصاره‌گیری سرد", "اسپرسوی چهارشات", "چهارشات با عصاره‌گیری سرد"],
+    note: "این حجم‌ها تنظیمات دستگاه هستند. دستورهای بالا بازده اسپرسو را با وزن بیان می‌کنند که معیار متفاوتی است. خروجی را با توجه به قهوه و سلیقهٔ خود تنظیم کنید.",
+    shareTitle: "اشتراک‌گذاری منو", shareCopy: "کد را اسکن کنید تا منو در دستگاه دیگری باز شود.",
+    qrAlt: "کد QR منوی کافه تی‌بری", qrLink: "باز کردن منوی کافه تی‌بری"
+  }
+};
+
 const itemNodes = [...document.querySelectorAll('.item')];
 const sectionNodes = [...document.querySelectorAll('.menu-section')];
 const navLinks = [...document.querySelectorAll('.category-nav a')];
 const languageButtons = [...document.querySelectorAll('[data-language]')];
+const numericCells = [...document.querySelectorAll('.measurement-table .numeric')].map(node => [node, node.textContent]);
 
 function setLanguage(language) {
   language = ['en', 'fr', 'fa'].includes(language) ? language : 'en';
@@ -193,6 +230,23 @@ function setLanguage(language) {
     item.querySelector('summary').textContent = copy.recipe;
     item.querySelector('.method').textContent = method;
   });
+  const guide = guideCopy[language];
+  const guideTargets = {
+    nav: '.guide-nav-link', eyebrow: '.help-heading .section-number', title: '#measurements-title',
+    intro: '.help-intro', coffeeTitle: '.coffee-table-title', coffeeNote: '.coffee-table-note',
+    size: '.size-label', volume: '.volume-label', espressoTitle: '.espresso-table-title',
+    espressoNote: '.espresso-table-note', preset: '.preset-label', dose: '.dose-label',
+    output: '.output-label', note: '.measurement-note', shareTitle: '#share-title', shareCopy: '.share-copy'
+  };
+  Object.entries(guideTargets).forEach(([key, selector]) => {
+    document.querySelector(selector).textContent = guide[key];
+  });
+  document.querySelectorAll('.preset-name').forEach((node, index) => { node.textContent = guide.presets[index]; });
+  numericCells.forEach(([node, original]) => {
+    node.textContent = language === 'fa' ? original.replace(/\d/g, digit => '۰۱۲۳۴۵۶۷۸۹'[digit]) : original;
+  });
+  document.querySelector('.qr-link').setAttribute('aria-label', guide.qrLink);
+  document.querySelector('.qr-link img').alt = guide.qrAlt;
   languageButtons.forEach(button => {
     const selected = button.dataset.language === language;
     button.setAttribute('aria-pressed', String(selected));
